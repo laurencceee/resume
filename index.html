@@ -1,137 +1,347 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marc Laurence Gumilao</title>
-  <link rel="stylesheet" href="../assets/animation.css" />
-  <link rel="stylesheet" href="../assets/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-  <div id="loader">
-    <div class="cube">
-      <div></div><div></div><div></div><div></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section position-relative">
+    <img src="./assets/images/carousel.jpg" alt="Hero" class="img-fluid hero-image">
+    <div class="overlay"></div> <!-- Dark overlay layer -->
+    <div class="hero-text">
+      <p class="fade-in">Hello, I'm</p>
+      <h1 class="fade-in delay-1">MARC LAURENCE</h1>
+      <h1 class="fade-in delay-1">A. GUMILAO</h1>
     </div>
+  </section>
+
+  <!-- My Journey Section -->
+<section class="my-journey py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">——— My Journey ———</h2>
+
+    <!-- 1 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/bthesis.jpg" class="img-fluid rounded journey-img" alt="Capstone">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">Best Capstone in Information Technology (CLR Tech)</h4>
+        <p>Recognized for excellence in innovation and system development at the 2024 capstone showcase.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="row align-items-center mb-5 fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/makati.jpg" class="img-fluid rounded journey-img" alt="ITlympics">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">Competed at UMAK for Web Dev (ITlympics)</h4>
+        <p>Represented the school in a web development competition among top IT students across universities.</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="row align-items-center flex-md-row-reverse mb-5 fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/clr.jpg" class="img-fluid rounded journey-img" alt="Gawad Dalumat">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">Gawad Dalumat: Best in Research per Course (2nd Place)</h4>
+        <p>Finalist for best research paper in IT, showcasing strong technical writing and systems research in 2025.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="row align-items-center mb-5 fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/freelancer.jpg" class="img-fluid rounded journey-img" alt="Momecoph Freelance">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">Freelance at Momecoph (Front-End Developer)</h4>
+        <p>Built modern, responsive front-end interfaces and contributed to live systems for Momecoph in 2025.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/exhibit.jpg" class="img-fluid rounded journey-img" alt="Web Exhibit">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">Exhibit: Web Design at Pasig Catholic College</h4>
+        <p>Presented a full website as a second-year student during the school's annual IT exhibit (2023).</p>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="row align-items-center mb-5 fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/graduate.jpg" class="img-fluid rounded journey-img" alt="Graduation">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">Graduated at Pasig Catholic College (2025)</h4>
+        <p>Finished BSIT with consistently high grades in major subjects — just shy of earning Cum Laude honors.</p>
+      </div>
+    </div>
+
+       <!-- 11 -->
+    <div class="row align-items-center mb-5  flex-md-row-reverse fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/samp3.jpg" class="img-fluid rounded journey-img" alt="Integratr OJT">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">OJT at Integratr Corporation</h4>
+        <p>Worked as a Front-End Developer and Quality Assurance tester. Built UI components and performed testing for real-world systems.</p>
+      </div>
+    </div>
+
+    <h2 class="text-center mb-5">——— Extra Curricular ———</h2>
+
+    <!-- 8 -->
+    <div class="row align-items-center flex-md-row-reverse mb-5 fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/bball.jpg" class="img-fluid rounded journey-img" alt="Basketball">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">Basketball IT Player (2022–2024)</h4>
+        <p>Represented the IT department in inter-departmental basketball competitions, building team spirit and discipline.</p>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="row align-items-center mb-5 fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/samp1.jpg" class="img-fluid rounded journey-img" alt="OSMO">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">OSMO IT Tech Support (2024)</h4>
+        <p>Volunteered as technical staff for an event, supporting setup, network systems, and troubleshooting during operations.</p>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="row align-items-center flex-md-row-reverse mb-5 fade-slide">
+      <div class="col-md-5">
+        <img src="./assets/images/officer.jpg" class="img-fluid rounded journey-img" alt="Alumni Officer">
+      </div>
+      <div class="col-md-7">
+        <h4 class="fw-bold">Alumni P.R.O Officer (2025)</h4>
+        <p>Served as Public Relations Officer for the alumni community, promoting engagement and event participation.</p>
+      </div>
+    </div>
+
+ 
+
   </div>
+</section>
 
-  <div id="main-content" class="hidden">
+<!-- My Projects Section -->
+<section class="my-projects py-5" style="background-color: #0f172a;">
+  <div class="container">
+    <h2 class="text-center text-white mb-5">
+      <i class="bi bi-code-slash me-2"></i> My Projects
+    </h2>
 
-    <nav class="navbar">
-      <div class="nav-brand">My Resume</div>
-      <ul class="nav-links">
-        <li><a href="#about-me">About</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#blog-posts">Blog</a></li>
-      </ul>
-      <button id="mode-toggle" aria-label="Toggle Dark/Light Mode" class="icon-button">
-        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-        </svg>
-        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/>
-          <line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/>
-          <line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-      </button>
-    </nav>
+    <div class="row g-4">
 
-    <section id="about-me" class="about-me section-padding">
-      <div class="about-content">
-        <img src="../assets/images/Laurence.png" alt="My Photo" class="profile-pic" />
-        <div class="text-content">
-          <h1>Hi, I'm Marc Laurence Gumilao</h1>
-          <p>
-            I'm a passionate IT student and developer specializing in frontend
-            and backend development. I love solving problems with technology and
-            creating sleek, user-friendly applications.
-          </p>
-          <p>
-            I enjoy learning new tech trends and applying creative solutions to
-            everyday challenges.
-          </p>
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="project-card bg-dark rounded">
+          <a href="https://example.com/project1" target="_blank">
+            <img src="./assets/images/web2.png" class="img-fluid project-thumb" alt="Project 1">
+          </a>
+          <div class="p-3 text-center">
+            <a href="https://example.com/project1" target="_blank" class="project-title">Portfolio Website Build (2025)</a>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section id="achievements" class="achievements section-padding">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Consistently scored 1.0 in all programming subjects</li>
-        <li>Project Manager of the Best Thesis Team</li>
-        <li>Expertise in Python, JavaScript, HTML, CSS, Bootstrap, Vue, and Laravel</li>
-        <li>Graduated top of class, nearly cum laude</li>
-      </ul>
-    </section>
-
-    <section id="skills" class="skills section-padding">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">JavaScript</span>
-        <span class="skill-pill">Vue.js</span>
-        <span class="skill-pill">Laravel</span>
-        <span class="skill-pill">CSS3</span>
-        <span class="skill-pill">Bootstrap</span>
-        <span class="skill-pill">Problem Solving</span>
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="project-card bg-dark rounded">
+          <a href="https://example.com/project2" target="_blank">
+            <img src="./assets/images/web2.png" class="img-fluid project-thumb" alt="Project 2">
+          </a>
+          <div class="p-3 text-center">
+            <a href="https://example.com/project2" target="_blank" class="project-title">Online Ordering System</a>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section id="blog-posts" class="blog-posts section-padding">
-      <h2>Latest Posts</h2>
-      <div class="posts-grid">
-        <article class="post">
-          <h3>How I Built a 3D Loader Animation</h3>
-          <p>Exploring CSS 3D transforms and animations to create engaging loaders.</p>
-          <a href="#" class="read-more">Read More →</a>
-        </article>
-        <article class="post">
-          <h3>Dark Mode Toggle with JavaScript</h3>
-          <p>A simple approach to implement dark and light themes on your website.</p>
-          <a href="#" class="read-more">Read More →</a>
-        </article>
-        <article class="post">
-          <h3>My Journey Into Tech</h3>
-          <p>A brief story about how I started coding and my goals for the future.</p>
-          <a href="#" class="read-more">Read More →</a>
-        </article>
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="project-card bg-dark rounded">
+          <a href="https://example.com/project3" target="_blank">
+            <img src="./assets/images/web3.png" class="img-fluid project-thumb" alt="Project 3">
+          </a>
+          <div class="p-3 text-center">
+            <a href="https://example.com/project3" target="_blank" class="project-title">UI Component Library</a>
+          </div>
+        </div>
       </div>
-    </section>
+
+    </div>
   </div>
+</section>
 
-  <script>
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      const main = document.getElementById('main-content');
-      setTimeout(() => {
-        loader.classList.add('fadeout');
-        setTimeout(() => {
-          loader.style.display = 'none';
-          main.classList.remove('hidden');
-        }, 300); 
-      }, 3500); 
-    });
+<!-- Tech Stack Section -->
+<section class="tech-stack py-5">
+  <div class="container">
+    <h2 class="text-center mb-5"><i class="bi bi-terminal-dash me-2"></i> Tech Stack</h2>
 
-    const modeToggle = document.getElementById('mode-toggle');
-    const moonIcon = document.getElementById('moon-icon');
-    const sunIcon = document.getElementById('sun-icon');
+    <div class="row g-4 justify-content-center">
 
-    modeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      if (document.body.classList.contains('dark-mode')) {
-        moonIcon.style.display = 'none';
-        sunIcon.style.display = 'block';
+      <!-- HTML -->
+      <div class="col-4 col-sm-3 col-md-2 text-center tech-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="img-fluid tech-icon" />
+        <p>HTML5</p>
+      </div>
+
+      <!-- CSS -->
+      <div class="col-4 col-sm-3 col-md-2 text-center tech-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="img-fluid tech-icon" />
+        <p>CSS3</p>
+      </div>
+
+      <!-- Bootstrap -->
+      <div class="col-4 col-sm-3 col-md-2 text-center tech-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="img-fluid tech-icon" />
+        <p>Bootstrap</p>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="col-4 col-sm-3 col-md-2 text-center tech-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="img-fluid tech-icon" />
+        <p>JavaScript</p>
+      </div>
+
+      <!-- React -->
+      <div class="col-4 col-sm-3 col-md-2 text-center tech-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="img-fluid tech-icon" />
+        <p>React</p>
+      </div>
+
+      <!-- Git -->
+      <div class="col-4 col-sm-3 col-md-2 text-center tech-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="img-fluid tech-icon" />
+        <p>Git</p>
+      </div>
+
+      <!-- GitHub -->
+      <div class="col-4 col-sm-3 col-md-2 text-center tech-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="img-fluid tech-icon" />
+        <p>GitHub</p>
+      </div>
+
+      <!-- VS Code -->
+      <div class="col-4 col-sm-3 col-md-2 text-center tech-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="img-fluid tech-icon" />
+        <p>VS Code</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Gmail Chatbot Floating Button -->
+<a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCHrhTcNqPKJtzjRzGnpNDVvsqczBSjwXTWNzVWmkqZXtjTCQWWfkSzBcZSXwPbSNdsTlwjB" 
+   target="_blank" 
+   class="gmail-chatbot" 
+   title="Contact me via Gmail">
+  <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail Chat" class="gmail-icon">
+</a>
+
+<!-- Contact Me Section -->
+<section class="contact-me py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="mb-4"><i class="bi bi-person-lines-fill me-2"></i> Contact Me</h2>
+
+    <div class="row justify-content-center gy-3 mb-4">
+      <!-- LinkedIn -->
+      <div class="col-6 col-md-4">
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-link">
+          <i class="bi bi-linkedin me-2"></i> LinkedIn
+        </a>
+      </div>
+
+      <!-- Indeed -->
+      <div class="col-6 col-md-4">
+        <a href="https://www.indeed.com/profile/yourprofile" target="_blank" class="contact-link">
+          <i class="bi bi-briefcase-fill me-2"></i> Indeed
+        </a>
+      </div>
+
+      <!-- GitHub -->
+      <div class="col-6 col-md-4">
+        <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+          <i class="bi bi-github me-2"></i> GitHub
+        </a>
+      </div>
+
+      <!-- Gmail -->
+      <div class="col-6 col-md-4">
+        <a href="mailto:youremail@gmail.com" class="contact-link">
+          <i class="bi bi-envelope-fill me-2"></i> Gmail
+        </a>
+      </div>
+
+      <!-- Phone -->
+      <div class="col-6 col-md-4">
+        <a href="tel:+639123456789" class="contact-link">
+          <i class="bi bi-telephone-fill me-2"></i> +63 912 345 6789
+        </a>
+      </div>
+
+      <!-- Resume -->
+      <div class="col-6 col-md-4">
+        <a href="./assets/CV - marc.laurence.gumilao.pdf" target="_blank" class="contact-link" download>
+          <i class="bi bi-file-earmark-arrow-down-fill me-2"></i> Download Resume
+        </a>
+        <br>
+        <a href="./assets/CV - marc.laurence.gumilao.pdf" target="_blank" class="contact-link">
+          <i class="bi bi-file-earmark-text-fill me-2"></i> Preview Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center py-3">
+  <div class="container">
+    <p class="mb-0 text-muted">— Resume Portfolio — © 2025</p>
+  </div>
+</footer>
+
+
+<script>
+  const faders = document.querySelectorAll('.fade-slide');
+
+  const appearOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
       } else {
-        moonIcon.style.display = 'block';
-        sunIcon.style.display = 'none';
+        entry.target.classList.remove('in-view');
       }
     });
-  </script>
+  }, {
+    threshold: 0.2
+  });
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+
+
 </body>
 </html>
