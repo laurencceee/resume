@@ -4,19 +4,20 @@ body {
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
 }
-
 .hero-section {
-  width: 100%;
-  max-height: 500px;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .overlay {
@@ -25,50 +26,145 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
   z-index: 1;
 }
 
 .hero-text {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  color: white;
+  position: relative;
   z-index: 2;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 15px;
+  max-width: 100%;
 }
 
-.hero-text p {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Fade-in animation */
 .fade-in {
   opacity: 0;
-  animation: fadeIn ease 1s forwards;
+  animation: fadeIn 1s ease forwards;
 }
 
-.fade-in.delay-1 {
+.delay-1 {
   animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+  }
 }
 
-/* --- Journey Section Styles (NEW) --- */
-.my-journey h2 {
-  font-weight: bold;
-  font-size: 2rem;
+/* Responsive text and layout for mobile */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+}
+
+.resume-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.resume-btn.view {
+  background-color: #17a2b8; /* Teal-blue */
+}
+
+.resume-btn.download {
+  background-color: #28a745; /* Success green */
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Smaller screen adjustments */
+@media (max-width: 480px) {
+  .resume-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+
+
+/* --- Journey Section Styles (NEW) --- */
+.my-journey {
+  background-color: #fefaf6; /* Light beige background */
+}
+
+.my-journey h2 {
+  color: #4a4a4a;
+  position: relative;
+}
+
+.my-journey h2::before,
+.my-journey h2::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: #dcdcdc;
+  margin: 0 15px;
+  vertical-align: middle;
+}
+
+.journey-card {
+  background-image: url('./assets/images/crumpled.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 576px) {
+  .journey-card {
+    padding: 20px 15px;
+  }
+
+  .journey-img {
+    margin-bottom: 15px;
+  }
+}
+
 
 .journey-img {
   border-radius: 20px;
@@ -79,31 +175,25 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Fade-in slide animation */
-.fade-slide {
+/* Start hidden */
+.fade-bounce {
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeSlideUp 1s ease forwards;
+  transform: translateX(-90px) scale(0.95);
+  transition-delay: 0.3s;
+  transition: all 2.5s cubic-bezier(0.23, 1.12, 0.32, 1); /* Bounce-like easing */
 }
 
-.fade-slide:nth-of-type(1) { animation-delay: 0.2s; }
-.fade-slide:nth-of-type(2) { animation-delay: 0.4s; }
-.fade-slide:nth-of-type(3) { animation-delay: 0.6s; }
-.fade-slide:nth-of-type(4) { animation-delay: 0.8s; }
-.fade-slide:nth-of-type(5) { animation-delay: 1s; }
-
-/* Start with hidden state */
-.fade-slide {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+/* For reversed layout (right-to-left entrance) */
+.fade-bounce.reverse {
+  transform: translateX(100px) scale(0.95);
 }
 
 /* When in view */
-.fade-slide.in-view {
-  opacity: 1;
-  transform: translateY(0);
+.fade-bounce.in-view {
+  opacity: 2;
+  transform: translateX(0) scale(1);
 }
+
 /* My Projects Section */
 .my-projects h2 {
   font-size: 2rem;
@@ -142,6 +232,37 @@ body {
   color: #0ea5e9;
   text-decoration: underline;
 }
+/* --- Project Card Animation --- */
+.project-card {
+  opacity: 0;
+  transform: scale(0.8) translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 1.25, 0.5, 1);
+  will-change: opacity, transform;
+}
+
+.project-card.in-view {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Optional Hover Effect (Adds Pixar touch) */
+.project-card:hover {
+  transform: scale(1.03) translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Project Title Styling */
+.project-title {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #38bdf8; /* Sky blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-title:hover {
+  color: #0ea5e9;
+}
 
 /* Tech Stack Section */
 .tech-stack {
@@ -172,6 +293,35 @@ body {
   transform: scale(1.2);
   filter: brightness(1.2);
 }
+/* Initial state */
+.tech-card {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  transition: all 0.6s ease-out;
+  will-change: transform, opacity;
+}
+
+/* When in view */
+.tech-card.in-view {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Tech icon hover effect */
+.tech-icon {
+  max-width: 60px;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Optional: stagger delay */
+.tech-card[data-delay] {
+  transition-delay: var(--delay);
+}
+
 /* Gmail Chatbot Button */
 .gmail-chatbot {
   position: fixed;
